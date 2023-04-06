@@ -1,0 +1,15 @@
+﻿  main.cpp
+C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ01\DS-W02-EJ01\main.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ01\DS-W02-EJ01\main.cpp(15,28): warning C4267: 'argument': conversion from 'size_t' to 'X', possible loss of data
+          with
+          [
+              X=int
+          ]
+C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ01\DS-W02-EJ01\Vector.hpp(39,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ01\DS-W02-EJ01\Vector.hpp(38): message : while compiling class template member function 'int Vector<int>::getSize(void)'
+C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ01\DS-W02-EJ01\main.cpp(24): message : see reference to function template instantiation 'int Vector<int>::getSize(void)' being compiled
+C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ01\DS-W02-EJ01\main.cpp(7): message : see reference to class template instantiation 'Vector<int>' being compiled
+C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ01\DS-W02-EJ01\Vector.hpp(45,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ01\DS-W02-EJ01\Vector.hpp(44): message : while compiling class template member function 'int Vector<int>::getMaxSize(void)'
+C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ01\DS-W02-EJ01\main.cpp(23): message : see reference to function template instantiation 'int Vector<int>::getMaxSize(void)' being compiled
+  DS-W02-EJ01.vcxproj -> C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ01\x64\Debug\DS-W02-EJ01.exe

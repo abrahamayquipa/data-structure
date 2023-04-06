@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ03\DS-W02-EJ03\main.cpp(10,20): warning C4267: 'argument': conversion from 'size_t' to 'X', possible loss of data
+          with
+          [
+              X=int
+          ]
+  DS-W02-EJ03.vcxproj -> C:\Users\Abraham\Desktop\data-structure\week 02 - recursivity and lambdas\DS-W02-EJ03\x64\Debug\DS-W02-EJ03.exe

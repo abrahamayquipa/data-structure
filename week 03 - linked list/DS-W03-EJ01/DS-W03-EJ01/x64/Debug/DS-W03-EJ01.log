@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\Abraham\Desktop\data-structure\week 03 - linked list\DS-W03-EJ01\DS-W03-EJ01\main.cpp(31,23): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+  DS-W03-EJ01.vcxproj -> C:\Users\Abraham\Desktop\data-structure\week 03 - linked list\DS-W03-EJ01\x64\Debug\DS-W03-EJ01.exe
