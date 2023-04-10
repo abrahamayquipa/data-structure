@@ -27,32 +27,42 @@ When making an algorithm, we will present 3 cases and verify if it works in thes
         name.method
         ```
 
-* In Vector.hpp:
+* In Matrix.hpp:
 ```sh
-#ifndef __VECTOR_HPP__
-#define __VECTOR_HPP__
+#ifndef __MATRIX_HPP__
+#define __MATRIX_HPP__
 #include <array>
 using namespace std;
 
-template<class X>
-class Vector {
-private:
-	X* arr;
-    size_t idx;
+template<class T>
+class Matrix {
+	T* arr;
+	size_t idx;
 	size_t n;
-public: 
-    Vector(int n = 10, size_t id = -1) {
+public:
+	Matrix(int n = 16, size_t id = -1) {
 		this->n = n;
-		arr = new int[n];
+		arr = new short[n];
 		idx = id;
 	}
-    ~Vector() {}
+	~Matrix() {}
 
-    int getSize();
+	bool push_back(T e);
+	short getSize();
+};
+
+template<class T>
+bool Matrix<T>::push_back(T e) {
+	if (idx + 1 < n) {
+		arr[++idx] = e;
+		cout << e << " ";
+		return true;
+	}
+	else return false;
 }
 
-template <class X>
-int Vector<X>::getSize() {
+template<class T>
+short Matrix<T>::getSize() {
 	if (idx != -1) return idx + 1;
 	else return 0;
 }
@@ -63,12 +73,15 @@ int Vector<X>::getSize() {
 * In main.cpp:
 ```sh
 #include <iostream>
-#include "Vector.hpp"
+#include "Matrix.hpp"
 
 int main() {
-	srand(time(NULL));
-	Vector<int> array_enteros;
-	cout << "* N. de elementos: " << array_enteros.getSize() << endl;
+	Matrix<short>matrix;
+	for (size_t i = 1; i < 17; i++) {
+		matrix.push_back(i);
+	}
+	cout << endl;
+	cout << "N. de elementos: " << matrix.getSize() << endl;
 	return 0;
 }
 ```
@@ -84,6 +97,10 @@ using namespace std;
 
 template<class X>
 class Vector {
+private:
+    X* arr;
+    size_t idx;
+	size_t n;
 public:
 	Vector(int n = 10, size_t id = -1) {
 		this->n = n;
@@ -119,7 +136,7 @@ int main() {
 }
 ```
 
-### Functions as variables
+### Functions as variables: function<()>
 This support external functions and lambdas.
 
 * Examples of declaration and invocation:
@@ -198,6 +215,17 @@ For positional access, positional delete and sorting, both array and vector are 
 * List.hpp:
 ```sh
 #include <iostream>
+
+template<typename T>
+struct Nodo {//vagon
+	Nodo<T>* next;
+	T elemento;
+	Nodo(T e) {
+		elemento = e;
+		next = nullptr;
+	}
+};
+
 
 template <class T>
 class List {

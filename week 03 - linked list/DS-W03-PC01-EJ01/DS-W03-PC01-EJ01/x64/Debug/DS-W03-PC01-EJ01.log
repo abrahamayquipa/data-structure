@@ -1,0 +1,11 @@
+﻿  main.cpp
+C:\Users\Abraham\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EJ01\DS-W03-PC01-EJ01\main.cpp(7,21): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+          with
+          [
+              T=short
+          ]
+C:\Users\Abraham\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EJ01\DS-W03-PC01-EJ01\Matrix.hpp(38,1): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+C:\Users\Abraham\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EJ01\DS-W03-PC01-EJ01\Matrix.hpp(37): message : while compiling class template member function 'short Matrix<short>::getSize(void)'
+C:\Users\Abraham\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EJ01\DS-W03-PC01-EJ01\main.cpp(10): message : see reference to function template instantiation 'short Matrix<short>::getSize(void)' being compiled
+C:\Users\Abraham\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EJ01\DS-W03-PC01-EJ01\main.cpp(5): message : see reference to class template instantiation 'Matrix<short>' being compiled
+  DS-W03-PC01-EJ01.vcxproj -> C:\Users\Abraham\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EJ01\x64\Debug\DS-W03-PC01-EJ01.exe
