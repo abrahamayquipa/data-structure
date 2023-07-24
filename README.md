@@ -1,8 +1,4 @@
-<br/>
-<div align="center">
-    <h1 align="center">Data structures</h1>
-</div>
-
+# Data structures
 * Structure = container.
 * Algorithm = process.
 
