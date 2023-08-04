@@ -11,12 +11,12 @@ When making an algorithm, we will present 3 cases and verify if it works in thes
 ### Templeates
 * Examples of declaration and invocation:
     * Declaration:
-        ```sh
+        ```cpp
         for functions: templeate<typename name>
         for classes: templeate<class name>
         ```
     * Invocation:
-        ```sh
+        ```cpp
         //Declaration
         className<TypeOfData>name;
         //Use
@@ -24,7 +24,7 @@ When making an algorithm, we will present 3 cases and verify if it works in thes
         ```
 
 * In Matrix.hpp:
-```sh
+```cpp
 #ifndef __MATRIX_HPP__
 #define __MATRIX_HPP__
 #include <array>
@@ -67,7 +67,7 @@ short Matrix<T>::getSize() {
 ```
 
 * In main.cpp:
-```sh
+```cpp
 #include <iostream>
 #include "Matrix.hpp"
 
@@ -85,7 +85,7 @@ int main() {
 ## Week 02: Recursivity and Lambdas
 ### Recursivity: 
 * Vector.hpp:
-```sh
+```cpp
 #ifndef __VECTOR_HPP__
 #define __VECTOR_HPP__
 #include <array>
@@ -114,7 +114,7 @@ public:
 ```
 
 * main.cpp:
-```sh
+```cpp
 #include <iostream>
 #include "Vector.hpp"
 using namespace std;
@@ -137,12 +137,12 @@ This support external functions and lambdas.
 
 * Examples of declaration and invocation:
     * Declaration:
-        ```sh
+        ```cpp
         function<tipeDataReturn(parameter)>nameVariable;
         ```
 
 * main.cpp:
-```sh
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -165,16 +165,16 @@ int main() {
 ### Lambdas - anonymous funntion
 * Examples of declaration and invocation:
     * Estructure:
-    ```sh
+    ```cpp
     nameVariable = [](){}
     ```
     * Declaration:
-    ```sh
+    ```cpp
     nameVariable = [globalVariables](parameters){instructions}
     ```
 
 * main.cpp:
-```sh
+```cpp
 #include <iostream>
 using namespace std;
 #include <functional>
@@ -209,7 +209,7 @@ For positional access, positional delete and sorting, both array and vector are 
     * Each node has only one input and output
 
 * List.hpp:
-```sh
+```cpp
 #include <iostream>
 
 template<typename T>
@@ -252,7 +252,7 @@ public:
 ```
 
 * main.cpp:
-```sh
+```cpp
 #include <iostream>
 using std::cout;
 #include "List.hpp"
