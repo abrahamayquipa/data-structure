@@ -12,15 +12,21 @@ When making an algorithm, we will present 3 cases and verify if it works in thes
 * Examples of declaration and invocation:
     * Declaration:
         ```cpp
-        for functions: templeate<typename name>
-        for classes: templeate<class name>
+        //for classes: 
+        templeate<class name>
+
+        //for functions: 
+        templeate<typename name>
         ```
     * Invocation:
         ```cpp
-        //Declaration
-        className<TypeOfData>name;
+        //for classes: 
+        className<TypeOfData> templeateName;
         //Use
         name.method
+
+        //for functions:
+        className<TypeOfData>(argument);
         ```
 
 * In Matrix.hpp:
