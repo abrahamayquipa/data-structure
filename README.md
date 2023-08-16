@@ -29,44 +29,37 @@ When making an algorithm, we will present 3 cases and verify if it works in thes
         className<TypeOfData>(argument);
         ```
 
-* In Matrix.hpp:
+* In Operations.hpp:
 ```cpp
-#ifndef __MATRIX_HPP__
-#define __MATRIX_HPP__
-#include <array>
+#ifndef __OPERATIONS_HPP__
+#define __OPERATIONS_HPP__
 using namespace std;
 
 template<class T>
-class Matrix {
-	T* arr;
-	size_t idx;
-	size_t n;
+class Operations {
+private:
+  int firstNumber, secondNumber, sumResult, subtractResult;
 public:
-	Matrix(int n = 16, size_t id = -1) {
-		this->n = n;
-		arr = new short[n];
-		idx = id;
-	}
-	~Matrix() {}
+  Operations(int firstNumber,int secondNumber) {
+    this->firstNumber = firstNumber;
+    this->secondNumber = secondNumber;
+    this->sumResult = 0;
+  }
 
-	bool push_back(T e);
-	short getSize();
+  ~Operations() {}
+
+  int add() {
+  sumResult = firstNumber + secondNumber;
+  return sumResult;
+  }
+
+  int subtract(int firstNumber,int secondNumber);
 };
 
-template<class T>
-bool Matrix<T>::push_back(T e) {
-	if (idx + 1 < n) {
-		arr[++idx] = e;
-		cout << e << " ";
-		return true;
-	}
-	else return false;
-}
-
-template<class T>
-short Matrix<T>::getSize() {
-	if (idx != -1) return idx + 1;
-	else return 0;
+template<typename T>
+int Operations<T>::subtract(int firstNumber,int secondNumber) {
+  subtractResult = firstNumber - secondNumber;
+  return subtractResult;
 }
 
 #endif
@@ -75,17 +68,14 @@ short Matrix<T>::getSize() {
 * In main.cpp:
 ```cpp
 #include <iostream>
-#include "Matrix.hpp"
+#include "Operations.hpp"
 
 int main() {
-	Matrix<short>matrix;
-	for (size_t i = 1; i < 17; i++) {
-		matrix.push_back(i);
-	}
-	cout << endl;
-	cout << "N. de elementos: " << matrix.getSize() << endl;
-	return 0;
-}
+  Operations<int> obj1(20, 10);
+  cout << obj1.add() << endl;
+  cout << obj1.subtract(10, 5);
+  return 0;
+};
 ```
 
 ## Week 02: Recursivity and Lambdas
@@ -144,7 +134,7 @@ This support external functions and lambdas.
 * Examples of declaration and invocation:
     * Declaration:
         ```cpp
-        function<tipeDataReturn(parameter)>nameVariable;
+        function<typeDataReturn(parameter)>nameVariable;
         ```
 
 * main.cpp:
