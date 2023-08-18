@@ -23,7 +23,7 @@ When making an algorithm, we will present 3 cases and verify if it works in thes
         //for classes: 
         className<TypeOfData> templeateName;
         //Use
-        name.method
+        templeateName.method
 
         //for functions:
         className<TypeOfData>(argument);
@@ -38,9 +38,9 @@ using namespace std;
 template<class T>
 class Operations {
 private:
-  int firstNumber, secondNumber, sumResult, subtractResult;
+  T firstNumber, secondNumber, sumResult, subtractResult;
 public:
-  Operations(int firstNumber,int secondNumber) {
+  Operations(T firstNumber,T secondNumber) {
     this->firstNumber = firstNumber;
     this->secondNumber = secondNumber;
     this->sumResult = 0;
@@ -48,16 +48,16 @@ public:
 
   ~Operations() {}
 
-  int add() {
+  T add() {
   sumResult = firstNumber + secondNumber;
   return sumResult;
   }
 
-  int subtract(int firstNumber,int secondNumber);
+  T subtract(T firstNumber,T secondNumber);
 };
 
 template<typename T>
-int Operations<T>::subtract(int firstNumber,int secondNumber) {
+T Operations<T>::subtract(T firstNumber,T secondNumber) {
   subtractResult = firstNumber - secondNumber;
   return subtractResult;
 }
@@ -73,7 +73,7 @@ int Operations<T>::subtract(int firstNumber,int secondNumber) {
 int main() {
   Operations<int> obj1(20, 10);
   cout << obj1.add() << endl;
-  cout << obj1.subtract(10, 5);
+  cout << obj1.subtract(10, 5) << endl;
   return 0;
 };
 ```
