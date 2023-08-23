@@ -84,21 +84,20 @@ int main() {
 ```cpp
 #ifndef __VECTOR_HPP__
 #define __VECTOR_HPP__
-#include <array>
 using namespace std;
 
 template<class X>
 class Vector {
 private:
-    X* arr;
-    size_t idx;
-	size_t n;
+  int arr[5];
 public:
-	Vector(int n = 10, size_t id = -1) {
-		this->n = n;
-		arr = new int[n];
-		idx = id;
+	Vector() {
+        for(int i = 0; i < 5; i++) {
+          arr[i] = i;
+        }
 	}
+
+    ~Vector() {}
 
     X lookForElement(X element, X n) {
         if(arr[n] == element) return n;
@@ -117,13 +116,7 @@ using namespace std;
 
 int main() {
 	Vector<int> array;
-
-    cout << "Informacion anadida: " << endl;
-	for (size_t i = 10; i < 17; ++i) {
-		array.push_back(i);
-	}
-    
-    cout << array.lookForElement(11, 7 - 1) << endl;
+    cout << array.lookForElement(2, 5) << endl;
 	return 0;
 }
 ```
