@@ -152,6 +152,8 @@ int main() {
 ```
 
 ### Lambdas - anonymous funntion
+Important: we use `&` to modify the value of a variable from its origin.
+
 * Examples of declaration and invocation:
     * Estructure:
     ```cpp
@@ -171,10 +173,10 @@ using namespace std;
 int main() {
     function<string(string)> variable;
     
-    string msj = "UPCINO";
+    string message = "UPCINO";
     
-    variable = [msj](string s) -> string {
-        return msj + " " + s + ", have a nice day";
+    variable = [message](string s) -> string {
+        return message + " " + s + ", have a nice day";
     };
     cout << variable("Juan");
 }
