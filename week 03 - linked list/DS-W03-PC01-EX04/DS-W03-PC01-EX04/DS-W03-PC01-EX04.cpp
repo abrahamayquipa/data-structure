@@ -11,26 +11,25 @@ int main() {
     short opcionMenuPrincipal, opcionMenuSecundario;
 
     Lista<Persona*, nullptr>* lst = new Lista<Persona*, nullptr>();
-    //* objetoOperaciones = new Operaciones();
+    Operaciones* objetoOperaciones = new Operaciones();
 
     do {
         system("cls");
         opcionMenuPrincipal = menuPrincipal();
-    } while (opcionMenuPrincipal < 0);
+    } while (opcionMenuPrincipal <= 0);
 
-    do {
+    while (true) {
         system("cls");
         opcionMenuSecundario = menuSecundario();
+        system("cls");
 
         string nombre, direccion;
         int telefono, edad, numeroComprado;
 
-        system("cls");
-
-        switch(opcionMenuSecundario) {
+        switch (opcionMenuSecundario) {
         case 1:
-            for (int i = 0; i < opcionMenuPrincipal; i++) {;
-                cout << "*****DATOS PERSONA " << i + 1 << ": *****" << endl;
+            for (int i = 0; i < opcionMenuPrincipal; i++) {
+                cout << "*****DATOS PERSONA " << i + 1 << ":*****" << endl;
                 cout << "Ingresar nombre: "; cin >> nombre;
                 cout << "Ingresar direccion: "; cin >> direccion;
                 cout << "Ingresar telefono: "; cin >> telefono;
@@ -41,16 +40,17 @@ int main() {
                 Persona* objetoPersona = new Persona(nombre, direccion, telefono, edad, numeroComprado);
                 lst->agregaInicial(objetoPersona);
             };
-            //objetoOperaciones->registarPersona(lst, opcionMenuPrincipal);
             break;
-        default:
-            cout << "";
+        case 2:
+            objetoOperaciones->mostrarContenidoLista();
+            break;
+        case 3:
+            objetoOperaciones->validacionesTotales();
             break;
         };
         system("pause>0");
-
-    } while (opcionMenuSecundario < 0 || opcionMenuSecundario > 3);
-
+    }
     delete lst;
+    delete objetoOperaciones;
     return 0;
 };

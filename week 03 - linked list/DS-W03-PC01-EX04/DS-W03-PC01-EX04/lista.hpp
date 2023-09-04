@@ -7,9 +7,12 @@ template <typename T, T NADA = 0>
 class Lista {
     struct Nodo;
     typedef function<int(T, T)> Comp;
+
     Nodo* ini;
-    uint lon; // número de elementos en la lista
-    Comp comparar; // lambda de criterio de comparación
+    uint    lon; // número de elementos en la lista
+
+    Comp    comparar; // lambda de criterio de comparación
+
 public:
     Lista() : ini(nullptr), lon(0), comparar([](T a, T b) {return a - b; }) {}
     Lista(Comp comparar) : ini(nullptr), lon(0), comparar(comparar) {}
@@ -40,7 +43,7 @@ public:
 
 template <typename T, T NADA>
 struct Lista<T, NADA>::Nodo {
-    T elem;
+    T       elem;
     Nodo* sig; // puntero apunta al siguiente nodo
 
     Nodo(T elem = NADA, Nodo* sig = nullptr) : elem(elem), sig(sig) {}
@@ -78,10 +81,14 @@ void Lista<T, NADA>::agregaInicial(T elem) {
 template <typename T, T NADA>
 void Lista<T, NADA>::agregaPos(T elem, uint pos) {
     if (pos > lon) return;
-    if (pos == 0) agregaInicial(elem);
+    if (pos == 0) {
+        agregaInicial(elem);
+    }
     else {
         Nodo* aux = ini;
-        for (int i = 1; i < pos; i++) aux = aux->sig;
+        for (int i = 1; i < pos; i++) {
+            aux = aux->sig;
+        }
         Nodo* nuevo = new Nodo(elem, aux->sig);
         if (nuevo != nullptr) {
             aux->sig = nuevo;
@@ -96,13 +103,17 @@ void Lista<T, NADA>::agregaFinal(T elem) {
 
 template <typename T, T NADA>
 void Lista<T, NADA>::modificarInicial(T elem) {
-    if (lon > 0) ini->elem = elem;
+    if (lon > 0) {
+        ini->elem = elem;
+    }
 }
 template <typename T, T NADA>
 void Lista<T, NADA>::modificarPos(T elem, uint pos) {
     if (pos >= 0 && pos < lon) {
         Nodo* aux = ini;
-        for (int i = 0; i < pos; i++) aux = aux->sig;
+        for (int i = 0; i < pos; i++) {
+            aux = aux->sig;
+        }
         aux->elem = elem;
     }
 }
@@ -137,10 +148,14 @@ template <typename T, T NADA>
 T Lista<T, NADA>::obtenerPos(uint pos) {
     if (pos >= 0 && pos < lon) {
         Nodo* aux = ini;
-        for (int i = 0; i < pos; i++) aux = aux->sig;
+        for (int i = 0; i < pos; i++) {
+            aux = aux->sig;
+        }
         return aux->elem;
     }
-    else return NADA;
+    else {
+        return NADA;
+    }
 }
 template <typename T, T NADA>
 T Lista<T, NADA>::obtenerFinal() {
@@ -151,7 +166,9 @@ template <typename T, T NADA>
 T Lista<T, NADA>::buscar(T elem) {
     Nodo* aux = ini;
     while (aux != nullptr) {
-        if (umparar(aux->elem, elem) == 0) return aux->elem;
+        if (comparar(aux->elem, elem) == 0) {
+            return aux->elem;
+        }
         aux = aux->sig;
     }
     return NADA;
