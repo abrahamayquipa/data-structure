@@ -5,11 +5,11 @@
 using namespace std;
 
 class Operaciones {
-	Lista<Persona*, nullptr>* lst;
+	Lista<Persona*, nullptr>* listaEnlazada;
 	int numeroGanador;
 public:
-	Operaciones() {
-		lst = new Lista<Persona*, nullptr>();
+	Operaciones(Lista<Persona*, nullptr>* listaEnlazada) {
+		this->listaEnlazada = listaEnlazada;
 		numeroGanador = 0;
 	};
 	~Operaciones() {};
@@ -19,29 +19,30 @@ public:
 	}
 
 	void mostrarContenidoLista() {
-		cout << "*****LISTA*****" << endl;
-		if (lst->esVacia()) cout << "La lista esta vacia" << endl;
+		cout << "LISTA:" << endl << endl;
+		if (listaEnlazada->esVacia()) cout << "La lista esta vacia";
 		else {
-			for (int i = 0; i < lst->longitud(); i++) {
-				cout << "*****DATOS PERSONA " << i + 1 << ":*****" << endl;
-				cout << "Nombre: " << lst->obtenerPos(i)->getNombre() << endl;
-				cout << "Direccion: " << lst->obtenerPos(i)->getDireccion() << endl;
-				cout << "Telefono: " << lst->obtenerPos(i)->getTelefono() << endl;
-				cout << "Edad: " << lst->obtenerPos(i)->getEdad() << endl;
-				cout << "Numero comprado: " << lst->obtenerPos(i)->getNumeroComprado() << endl << endl;
+			for (int i = 0; i < listaEnlazada->longitud(); i++) {
+				cout << "DATOS PERSONA " << i + 1 << ":" << endl;
+				cout << "Nombre: " << listaEnlazada->obtenerPos(i)->getNombre() << endl;
+				cout << "Direccion: " << listaEnlazada->obtenerPos(i)->getDireccion() << endl;
+				cout << "Telefono: " << listaEnlazada->obtenerPos(i)->getTelefono() << endl;
+				cout << "Edad: " << listaEnlazada->obtenerPos(i)->getEdad() << endl;
+				cout << "Numero comprado: " << listaEnlazada->obtenerPos(i)->getNumeroComprado() << endl << endl;
 			}
 		}
 	}
 
 	void numeroExacto(int numeroGanador) {
-		cout << "*****GANADORES POR NUMERO EXACTO*****";
-		cout << "Numero ganador: " << numeroGanador << endl;
+		cout << "GANADORES POR NUMERO EXACTO:" << endl << endl;
+		cout << "Numero ganador: " << numeroGanador << endl << endl;
 		cout << "Coincidencias: " << endl;
 
-		for (int i = 0; i < lst->longitud(); i++) {
-			if (lst->obtenerPos(i)->getNumeroComprado() == numeroGanador) {
-				cout << "- " << lst->obtenerPos(i)->getNombre() << ": " << lst->obtenerPos(i)->getNumeroComprado() << endl;
+		for (int i = 0; i < listaEnlazada->longitud(); i++) {
+			if (listaEnlazada->obtenerPos(i)->getNumeroComprado() == numeroGanador) {
+				cout << "- " << listaEnlazada->obtenerPos(i)->getNombre() << ": " << listaEnlazada->obtenerPos(i)->getNumeroComprado() << endl;
 			}
+			else cout << "Lamentablemente no hubo coincidencias";
 		}
 	}
 

@@ -10,8 +10,8 @@ int main() {
     srand(time(NULL));
     short opcionMenuPrincipal, opcionMenuSecundario;
 
-    Lista<Persona*, nullptr>* lst = new Lista<Persona*, nullptr>();
-    Operaciones* objetoOperaciones = new Operaciones();
+    Lista<Persona*, nullptr>* listaEnlazada = new Lista<Persona*, nullptr>();
+    Operaciones* objetoOperaciones = new Operaciones(listaEnlazada);
 
     do {
         system("cls");
@@ -29,16 +29,16 @@ int main() {
         switch (opcionMenuSecundario) {
         case 1:
             for (int i = 0; i < opcionMenuPrincipal; i++) {
-                cout << "*****DATOS PERSONA " << i + 1 << ":*****" << endl;
+                cout << "DATOS PERSONA " << i + 1 << ":" << endl;
                 cout << "Ingresar nombre: "; cin >> nombre;
                 cout << "Ingresar direccion: "; cin >> direccion;
                 cout << "Ingresar telefono: "; cin >> telefono;
                 cout << "Ingresar edad: "; cin >> edad;
                 cout << "Ingresar numero comprado: "; cin >> numeroComprado;
-                cout << endl;
+                cout << endl << endl;
 
                 Persona* objetoPersona = new Persona(nombre, direccion, telefono, edad, numeroComprado);
-                lst->agregaInicial(objetoPersona);
+                listaEnlazada->agregaInicial(objetoPersona);
             };
             break;
         case 2:
@@ -50,7 +50,7 @@ int main() {
         };
         system("pause>0");
     }
-    delete lst;
+    delete listaEnlazada;
     delete objetoOperaciones;
     return 0;
 };

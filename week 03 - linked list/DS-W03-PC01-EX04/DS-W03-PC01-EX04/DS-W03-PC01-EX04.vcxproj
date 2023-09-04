@@ -135,6 +135,9 @@
     <ClInclude Include="operaciones.hpp" />
     <ClInclude Include="persona.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="archivo.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
