@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib> 
+//#include <fstream> 
 #include "lista.hpp"
 using namespace std;
 
@@ -42,7 +43,7 @@ public:
 			if (listaEnlazada->obtenerPos(i)->getNumeroComprado() == numeroGanador) {
 				cout << "- " << listaEnlazada->obtenerPos(i)->getNombre() << ": " << listaEnlazada->obtenerPos(i)->getNumeroComprado() << endl;
 			}
-			else cout << "Lamentablemente no hubo coincidencias";
+			else cout << "No hubo coincidencias con la persona " << i + 1 << endl;
 		}
 	}
 
@@ -50,4 +51,13 @@ public:
 		numeroGanador = generarNumeroGanador();
 		numeroExacto(numeroGanador);
 	}
+
+	//void guardarEnArchivo() {
+	//	ofstream file("archivo.txt");
+	//	for (int i = 0; i < listaEnlazada->longitud(); i++) {
+	//		file << listaEnlazada->obtenerPos(i)->toString() << "\n";
+	//	}
+	//	file.close();
+	//	cout << "Lista guardada exitosamente" << endl;
+	//}
 };

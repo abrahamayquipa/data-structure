@@ -37,7 +37,7 @@ public:
 
     void toString() {
         cout << this->nombre << " | " << this->direccion << " | " << this->telefono << " | " << this->edad << " | " << this->numeroComprado;
-    }
+    };
 };
 
 #endif

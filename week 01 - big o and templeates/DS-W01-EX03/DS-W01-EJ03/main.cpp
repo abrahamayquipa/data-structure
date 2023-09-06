@@ -49,7 +49,7 @@ public:
         cout << "size: " << n << endl;
     }
 
-    void mostrar() {
+    void show() {
         cout << "array: ";
         for (int i = 0; i < n; ++i) {
             cout << arr[i] << " ";
@@ -68,7 +68,7 @@ int main() {
     vector.size();
     vector.begin();
     vector.end();
-    vector.mostrar();
+    vector.show();
     vector.at(1);
     return 0;
 }

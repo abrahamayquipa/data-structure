@@ -26,28 +26,38 @@ int main() {
         string nombre, direccion;
         int telefono, edad, numeroComprado;
 
-        switch (opcionMenuSecundario) {
-        case 1:
-            for (int i = 0; i < opcionMenuPrincipal; i++) {
-                cout << "DATOS PERSONA " << i + 1 << ":" << endl;
-                cout << "Ingresar nombre: "; cin >> nombre;
-                cout << "Ingresar direccion: "; cin >> direccion;
-                cout << "Ingresar telefono: "; cin >> telefono;
-                cout << "Ingresar edad: "; cin >> edad;
-                cout << "Ingresar numero comprado: "; cin >> numeroComprado;
-                cout << endl << endl;
+        int posicionEliminar;
 
-                Persona* objetoPersona = new Persona(nombre, direccion, telefono, edad, numeroComprado);
-                listaEnlazada->agregaInicial(objetoPersona);
+        
+            switch (opcionMenuSecundario) {
+            case 1:
+                for (int i = 0; i < opcionMenuPrincipal; i++) {
+                    cout << "DATOS PERSONA " << i + 1 << ":" << endl;
+                    cout << "Ingresar nombre: "; cin >> nombre;
+                    cout << "Ingresar direccion: "; cin >> direccion;
+                    cout << "Ingresar telefono: "; cin >> telefono;
+                    cout << "Ingresar edad: "; cin >> edad;
+                    cout << "Ingresar numero comprado: "; cin >> numeroComprado;
+                    cout << endl << endl;
+
+                    Persona* objetoPersona = new Persona(nombre, direccion, telefono, edad, numeroComprado);
+                    listaEnlazada->agregaFinal(objetoPersona);
+                };
+                break;
+            case 2:
+                objetoOperaciones->mostrarContenidoLista();
+                break;
+            case 3:
+                objetoOperaciones->validacionesTotales();
+                break;
+            case 4:
+                cout << "ELIMINAR DATO PERSONA:" << endl;
+                cout << "Numero del dato persona a eliminar: ";
+                cin >> posicionEliminar;
+                listaEnlazada->eliminaPos(posicionEliminar - 1);
+                break;
             };
-            break;
-        case 2:
-            objetoOperaciones->mostrarContenidoLista();
-            break;
-        case 3:
-            objetoOperaciones->validacionesTotales();
-            break;
-        };
+        
         system("pause>0");
     }
     delete listaEnlazada;

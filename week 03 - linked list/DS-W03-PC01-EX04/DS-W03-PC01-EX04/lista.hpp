@@ -9,10 +9,9 @@ class Lista {
     typedef function<int(T, T)> Comp;
 
     Nodo* ini;
-    uint    lon; // número de elementos en la lista
+    uint lon; // número de elementos en la lista
 
-    Comp    comparar; // lambda de criterio de comparación
-
+    Comp comparar; // lambda de criterio de comparación
 public:
     Lista() : ini(nullptr), lon(0), comparar([](T a, T b) {return a - b; }) {}
     Lista(Comp comparar) : ini(nullptr), lon(0), comparar(comparar) {}
@@ -98,7 +97,17 @@ void Lista<T, NADA>::agregaPos(T elem, uint pos) {
 }
 template <typename T, T NADA>
 void Lista<T, NADA>::agregaFinal(T elem) {
-    agregarPos(elem, lon); // ;)
+    Nodo* nuevo = new Nodo(elem);
+    if (!nuevo) return;
+    if (!ini) ini = nuevo;
+    else {
+        Nodo* aux = ini;
+        while (aux->sig) {
+            aux = aux->sig;
+        }
+        aux->sig = nuevo;
+    }
+    lon++;
 }
 
 template <typename T, T NADA>
@@ -119,7 +128,7 @@ void Lista<T, NADA>::modificarPos(T elem, uint pos) {
 }
 template <typename T, T NADA>
 void Lista<T, NADA>::modificarFinal(T elem) {
-    modificar(elem, lon - 1);
+    modificarPos(elem, lon - 1);
 }
 
 template <typename T, T NADA>
@@ -133,11 +142,22 @@ void Lista<T, NADA>::eliminaInicial() {
 }
 template <typename T, T NADA>
 void Lista<T, NADA>::eliminaPos(uint pos) {
-
+    if (pos >= lon) return;
+    if (pos == 0) eliminaInicial();
+    else {
+        Nodo* aux = ini;
+        for (uint i = 1; i < pos; i++) {
+            aux = aux->sig;
+        }
+        Nodo* nodoAEliminar = aux->sig;
+        aux->sig = nodoAEliminar->sig;
+        delete nodoAEliminar;
+        lon--;
+    }
 }
 template <typename T, T NADA>
 void Lista<T, NADA>::eliminaFinal() {
-
+    eliminaPos(lon - 1);
 }
 
 template <typename T, T NADA>

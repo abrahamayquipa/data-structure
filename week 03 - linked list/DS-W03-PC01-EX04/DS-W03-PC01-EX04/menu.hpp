@@ -15,7 +15,8 @@ int menuSecundario() {
     cout << "MENU SECUNDARIO:" << endl;
     cout << "1. Registrar los datos de un persona" << endl;
     cout << "2. Mostrar lista de personas" << endl;
-    cout << "3. Mostrar lista de resultados y ganadores" << endl << endl;
+    cout << "3. Mostrar lista de resultados y ganadores" << endl;
+    cout << "4. Eliminar dato persona: " << endl << endl;
     cout << "Elige la opcion: ";
     cin >> opcionSecundaria;
     return opcionSecundaria;

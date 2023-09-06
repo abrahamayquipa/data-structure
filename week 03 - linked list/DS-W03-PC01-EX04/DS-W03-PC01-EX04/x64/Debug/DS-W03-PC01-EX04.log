@@ -1,15 +1,15 @@
 ﻿  DS-W03-PC01-EX04.cpp
-C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\operaciones.hpp(25,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\operaciones.hpp(41,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\operaciones.hpp(26,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\operaciones.hpp(42,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\DS-W03-PC01-EX04.cpp(10,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\lista.hpp(151,27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\lista.hpp(148,40): message : while compiling class template member function 'T Lista<T,0x0>::obtenerPos(uint)'
+C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\lista.hpp(172,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\lista.hpp(169,40): message : while compiling class template member function 'T Lista<T,0x0>::obtenerPos(uint)'
           with
           [
               T=Persona *
           ]
-C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\operaciones.hpp(27,69): message : see the first reference to 'Lista<Persona *,0x0>::obtenerPos' in 'Operaciones::mostrarContenidoLista'
-C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\operaciones.hpp(23,7): message : see reference to class template instantiation 'Lista<Persona *,0x0>' being compiled
+C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\operaciones.hpp(28,69): message : see the first reference to 'Lista<Persona *,0x0>::obtenerPos' in 'Operaciones::mostrarContenidoLista'
+C:\Users\PC\Desktop\data-structure\week 03 - linked list\DS-W03-PC01-EX04\DS-W03-PC01-EX04\operaciones.hpp(24,7): message : see reference to class template instantiation 'Lista<Persona *,0x0>' being compiled
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\functional(841,31): warning C4244: 'return': conversion from '__int64' to '_Rx', possible loss of data
           with
           [
