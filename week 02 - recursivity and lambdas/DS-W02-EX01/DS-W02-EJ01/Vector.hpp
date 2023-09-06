@@ -8,7 +8,6 @@ class Vector {
 	X* arr;
 	size_t idx;
 	size_t n;
-
 public:
 	Vector(int n = 10, size_t id = -1) {
 		this->n = n;
@@ -63,7 +62,6 @@ bool Vector<X>::push_back(X e) {
 		cout << e << endl;
 		return true;
 	}
-
 	else return false;
 }
 
