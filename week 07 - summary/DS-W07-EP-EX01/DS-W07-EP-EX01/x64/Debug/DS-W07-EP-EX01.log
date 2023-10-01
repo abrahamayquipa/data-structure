@@ -1,0 +1,38 @@
+﻿  DS-W07-EP-EX01.cpp
+C:\Users\PC\Desktop\data-structure\week 07 - summary\DS-W07-EP-EX01\DS-W07-EP-EX01\DS-W07-EP-EX01.cpp(11,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\functional(841,31): warning C4244: 'return': conversion from '__int64' to '_Rx', possible loss of data
+          with
+          [
+              _Rx=int
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\functional(837,9): message : while compiling class template member function '_Rx std::_Func_impl_no_alloc<ListaEnlazadaSimple<Persona *,0x0>::{ctor}::<lambda_1_>,_Rx,T,T>::_Do_call(T &&,T &&)'
+          with
+          [
+              _Rx=int,
+              T=Persona *
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\functional(731,13): message : see reference to class template instantiation 'std::_Func_impl_no_alloc<ListaEnlazadaSimple<Persona *,0x0>::{ctor}::<lambda_1_>,_Ret,T,T>' being compiled
+          with
+          [
+              _Ret=int,
+              T=Persona *
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\functional(925,23): message : see reference to variable template 'const bool _Is_large<std::_Func_impl_no_alloc<`ListaEnlazadaSimple<Persona *,0>::ListaEnlazadaSimple<Persona *,0>'::`1'::<lambda_1_>,int,Persona *,Persona *> >' being compiled
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\functional(1052,13): message : see reference to function template instantiation 'void std::_Func_class<_Ret,T,T>::_Reset<_Ty>(_Fx &&)' being compiled
+          with
+          [
+              _Ret=int,
+              T=Persona *,
+              _Ty=ListaEnlazadaSimple<Persona *,0x0>::{ctor}::<lambda_1_>,
+              _Fx=ListaEnlazadaSimple<Persona *,0x0>::{ctor}::<lambda_1_>
+          ]
+C:\Users\PC\Desktop\data-structure\week 07 - summary\DS-W07-EP-EX01\DS-W07-EP-EX01\listaEnlazadaSimple.hpp(16,96): message : see reference to function template instantiation 'std::function<int (T,T)>::function<ListaEnlazadaSimple<T,0x0>::{ctor}::<lambda_1_>,0>(_Fx &&)' being compiled
+          with
+          [
+              T=Persona *,
+              _Fx=ListaEnlazadaSimple<Persona *,0x0>::{ctor}::<lambda_1_>
+          ]
+C:\Users\PC\Desktop\data-structure\week 07 - summary\DS-W07-EP-EX01\DS-W07-EP-EX01\listaEnlazadaSimple.hpp(16,5): message : while compiling class template member function 'ListaEnlazadaSimple<Persona *,0x0>::ListaEnlazadaSimple(void)'
+C:\Users\PC\Desktop\data-structure\week 07 - summary\DS-W07-EP-EX01\DS-W07-EP-EX01\DS-W07-EP-EX01.cpp(13,56): message : see the first reference to 'ListaEnlazadaSimple<Persona *,0x0>::ListaEnlazadaSimple' in 'main'
+C:\Users\PC\Desktop\data-structure\week 07 - summary\DS-W07-EP-EX01\DS-W07-EP-EX01\operaciones.hpp(16,7): message : see reference to class template instantiation 'ListaEnlazadaSimple<Persona *,0x0>' being compiled
+  DS-W07-EP-EX01.vcxproj -> C:\Users\PC\Desktop\data-structure\week 07 - summary\DS-W07-EP-EX01\x64\Debug\DS-W07-EP-EX01.exe

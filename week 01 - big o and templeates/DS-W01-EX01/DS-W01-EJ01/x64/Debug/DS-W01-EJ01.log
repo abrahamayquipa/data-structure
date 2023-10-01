@@ -1,3 +1,3 @@
 ﻿  main.cpp
-C:\Users\Abraham\Desktop\data-structure\week 01 - big o and templeates\DS-W01-EJ01\DS-W01-EJ01\main.cpp(6,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  DS-W01-EJ01.vcxproj -> C:\Users\Abraham\Desktop\data-structure\week 01 - big o and templeates\DS-W01-EJ01\x64\Debug\DS-W01-EJ01.exe
+C:\Users\PC\Desktop\data-structure\week 01 - big o and templeates\DS-W01-EX01\DS-W01-EJ01\main.cpp(6,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  DS-W01-EJ01.vcxproj -> C:\Users\PC\Desktop\data-structure\week 01 - big o and templeates\DS-W01-EX01\x64\Debug\DS-W01-EJ01.exe
