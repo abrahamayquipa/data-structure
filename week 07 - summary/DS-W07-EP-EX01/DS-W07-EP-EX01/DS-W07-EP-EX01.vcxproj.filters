@@ -20,19 +20,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="persona.hpp">
+    <ClInclude Include="futbolista.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="listaEnlazadaSimple.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="operaciones.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="nodo.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="listaDoblementeEnlazada.hpp">
+    <ClInclude Include="pila.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

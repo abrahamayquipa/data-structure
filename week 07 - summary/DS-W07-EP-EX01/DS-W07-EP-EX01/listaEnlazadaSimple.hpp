@@ -20,7 +20,7 @@ public:
         Nodo<T>* aux = inicio;
         while (inicio != nullptr) {
             aux = inicio;
-            inicio = inicio->sig;
+            inicio = inicio->siguiente;
             delete aux;
         }
     }
@@ -141,8 +141,6 @@ public:
         }
     }
 
-
-
     T obtenerFinal() {
         return obtenerPos(longitud - 1);
     }
@@ -156,6 +154,58 @@ public:
             aux = aux->sig;
         }
         return NADA;
+    }
+
+    /*
+    * No salio :c
+    * 
+    Nodo<T>* obtenerPos(int pos) {
+        if (pos >= 0 && pos < longitud) {
+            Nodo<T>* aux = inicio;
+            for (int i = 0; i < pos; i++) aux = aux->siguiente; 
+            return aux;
+        }
+        else {
+            return nullptr;
+        }
+    }*/
+
+    /*
+    * Codigo modelo de clase: 
+    * void ordInsercion(int a[], int n) {
+	int aux, k;
+	for (int i = 1; i<n; i++) {
+		aux = a[i];
+		k = i - 1;
+		while (k >= 0 && aux < a[k]) {
+			a[k + 1] = a[k];
+			k--;
+		}
+		a[k + 1] = aux;
+	}
+    }
+    */
+
+    void ordenarPorInsercionEdad() {
+        if (!inicio || !inicio->siguiente) return;
+        
+        for (int k = 0; k < longitud; k++) {
+            Nodo<T>* i = inicio->siguiente;
+            while (i) {
+                T clave = i->valor;
+                Nodo<T>* j = i->anterior;
+
+                while (j && j->valor->getEdad() > clave->getEdad()) {
+                    j->siguiente->valor = j->valor;
+                    j = j->anterior;
+                }
+
+                if (j)  j->siguiente->valor = clave;
+                else inicio->valor = clave;
+
+                i = i->siguiente;
+            }
+        }
     }
 };
 

@@ -1,0 +1,10 @@
+﻿  DS-W11-EX01.cpp
+C:\Users\PC\Desktop\data-structure\week 11 - binary tree\DS-W11-EX01\DS-W11-EX01\ArbolBinario.hpp(102,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\PC\Desktop\data-structure\week 11 - binary tree\DS-W11-EX01\DS-W11-EX01\ArbolBinario.hpp(99,6): message : while compiling class template member function 'int ArbolBinario<int>::busquedaBinaria(const std::vector<T,std::allocator<T>> &,const T)'
+          with
+          [
+              T=int
+          ]
+C:\Users\PC\Desktop\data-structure\week 11 - binary tree\DS-W11-EX01\DS-W11-EX01\DS-W11-EX01.cpp(36,16): message : see the first reference to 'ArbolBinario<int>::busquedaBinaria' in 'main'
+C:\Users\PC\Desktop\data-structure\week 11 - binary tree\DS-W11-EX01\DS-W11-EX01\DS-W11-EX01.cpp(11,46): message : see reference to class template instantiation 'ArbolBinario<int>' being compiled
+  DS-W11-EX01.vcxproj -> C:\Users\PC\Desktop\data-structure\week 11 - binary tree\DS-W11-EX01\x64\Debug\DS-W11-EX01.exe

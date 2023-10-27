@@ -131,10 +131,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="listaEnlazadaSimple.hpp" />
-    <ClInclude Include="listaDoblementeEnlazada.hpp" />
     <ClInclude Include="nodo.hpp" />
-    <ClInclude Include="operaciones.hpp" />
-    <ClInclude Include="persona.hpp" />
+    <ClInclude Include="futbolista.hpp" />
+    <ClInclude Include="pila.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
