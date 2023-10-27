@@ -1,5 +1,5 @@
-#ifndef __ARBOLBB_HPP__
-#define __ARBOLBB_HPP__
+#ifndef __ARBOL_BINARIO_HPP__
+#define __ARBOL_BINARIO_HPP__
 
 #include <functional>
 using namespace std;
