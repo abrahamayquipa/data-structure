@@ -1,0 +1,19 @@
+﻿  DS-W12-EX01.cpp
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\Grafo.hpp(64,56): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\Grafo.hpp(63,6): message : while compiling class template member function 'int Grafo<int,-1>::cantidadArcos(int)'
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\DS-W12-EX01.cpp(29,3): message : see the first reference to 'Grafo<int,-1>::cantidadArcos' in 'main'
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\DS-W12-EX01.cpp(8,32): message : see reference to class template instantiation 'Grafo<int,-1>' being compiled
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\Grafo.hpp(60,49): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\Grafo.hpp(55,6): message : while compiling class template member function 'int Grafo<int,-1>::adicionarArco(int,int)'
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\DS-W12-EX01.cpp(17,28): message : see the first reference to 'Grafo<int,-1>::adicionarArco' in 'main'
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\Grafo.hpp(45,24): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\Grafo.hpp(44,6): message : while compiling class template member function 'int Grafo<int,-1>::cantidadVertices(void)'
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\DS-W12-EX01.cpp(27,2): message : see the first reference to 'Grafo<int,-1>::cantidadVertices' in 'main'
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\Grafo.hpp(41,27): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\Grafo.hpp(37,6): message : while compiling class template member function 'int Grafo<int,-1>::adicionarVertice(T)'
+          with
+          [
+              T=int
+          ]
+C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\DS-W12-EX01\DS-W12-EX01.cpp(11,31): message : see the first reference to 'Grafo<int,-1>::adicionarVertice' in 'main'
+  DS-W12-EX01.vcxproj -> C:\Users\PC\Desktop\data-structure\week 12 - graphs\DS-W12-EX01\x64\Debug\DS-W12-EX01.exe
